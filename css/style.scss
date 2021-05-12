@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$Very-dark-blue: hsl(233, 47%, 7%);
+$Dark-desaturated-blue: hsl(244, 38%, 16%);
+$Soft-violet: hsl(277, 64%, 61%);
+$White: hsl(0, 0%, 100%);
+$Slightly: hsla(0, 0%, 100%, 0.75);
+$Slightly-stat: hsla(0, 0%, 100%, 0.6);
+
+body {
+  background-color: $Very-dark-blue;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-size: 0.938rem;
+}
+
+.card {
+  background-color: $Dark-desaturated-blue;
+  max-width: 55rem;
+  border-radius: 5px;
+  margin: auto;
+  display: flex;
+}
+
+.card-text {
+  padding: 2.7rem 4.7rem 2.7rem 3rem;
+  flex: 1;
+
+  h1 {
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    color: $White;
+
+    .txt-prm {
+      color: $Soft-violet;
+    }
+  }
+
+  p {
+    color: $Slightly-stat;
+    padding: 1rem 1rem 3rem 0rem;
+    font-family: "Lexend Deca", sans-serif;
+    text-align: left;
+  }
+  .card-sub {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+
+    h3 {
+      color: $White;
+      font-family: "Inter", sans-serif;
+    }
+    span {
+      color: $Slightly-stat;
+      font-family: "Lexend Deca", sans-serif;
+      text-transform: uppercase;
+      font-size: 0.6rem;
+    }
+  }
+}
+
+.card-image {
+  flex: 1;
+  background-color: $Soft-violet;
+  border-radius: 0 5px 5px 0;
+
+  .dsk-img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+  }
+
+  .mb-img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 85%;
+    position: relative;
+    top: 15%;
+    flex-direction: column-reverse;
+  }
+
+  .card-text {
+    padding: 1.6rem;
+    h1 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+
+    .card-sub {
+      padding: 0;
+      height: 10rem;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+    }
+  }
+
+  .card-image {
+    .dsk-img {
+      display: none;
+    }
+    .mb-img {
+      display: block;
+    }
+  }
+}
